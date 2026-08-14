@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corsi completati | Synthesis srl</title>
+<meta name="description" content="Scopri tutti i corsi di formazione completati in questi anni: la storia concreta del lavoro di Synthesis.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--
+THESIS: Synthesis trasforma i finanziamenti pubblici in carriere; la superficie rifiuta il vecchio look "brochure ente di formazione" e adotta il canone piattaforma-SaaS (riferimento Hotmart) in blu Synthesis.
+OWN-WORLD: fondo bianco-ghiaccio + campi blu impegnati nelle pagine interne e nel footer (petrolio #071E2B -> ciano #29ABE2); header bianco flottante a pillola sotto la barra di accreditamento ink; display Bricolage Grotesque + testo Figtree; CTA a pillola blu; card raggio 16-28 con ombre offset+blur; icone stroke 1.75; pantera nera come marchio (peek dietro la foto hero).
+STORY: il visitatore (disoccupato, azienda, cittadino straniero) capisce subito che Synthesis eroga formazione finanziata accreditata, trova il proprio percorso nei tab in pochi secondi, apre il corso, scarica la locandina, contatta.
+FIRST VIEWPORT (tutto sopra la piega a 1280x860): barra credenziale Regione Veneto -> header flottante -> hero chiaro: chip credenziali reali, titolo display con evidenziatore blu, lead FSE/Regione Veneto, CTA "Corsi in partenza" + link percorsi; a destra foto reale in card con stat-chip flottanti (20.083 utenti, 6 sedi, ISO 9001) e pantera che sbircia.
+FORM: canone Hotmart eseguito a piena fedeltà in identità Synthesis — direzione vincolata dal brief del cliente (seed script non disponibile: niente Node nell'ambiente).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.
+-->
+<a class="visually-hidden" href="#main">Salta al contenuto</a>
+<div class="credbar">
+  <div class="container">
+    <div class="credbar-seal">
+      <img src="assets/img/u2104-regione.png" alt="Regione del Veneto — Leone di San Marco">
+      <b>Organismo di Formazione accreditato dalla Regione del Veneto</b>
+    </div>
+    <div class="credbar-links">
+      <a class="hide-s" href="tel:+390498078751"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 14.2v2a1.7 1.7 0 0 1-1.9 1.7A16.4 16.4 0 0 1 2.1 4.4 1.7 1.7 0 0 1 3.8 2.5h2a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-.9.8a13.6 13.6 0 0 0 5.1 5.1l.9-.8a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg> 049 80 78 751</a>
+      <a class="hide-s" href="mailto:formazione@synthesis-srl.com"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12.5" rx="2.2"/><path d="m2.8 5.6 7.2 6 7.2-6"/></svg> formazione@synthesis-srl.com</a>
+    </div>
+  </div>
+</div>
+<header class="site-head">
+  <div class="container">
+    <div class="head-bar">
+      <a class="brand" href="index.html" aria-label="Synthesis srl — Formazione e Consulenza">
+  <img src="assets/img/pantera.png" alt="Pantera Synthesis" width="40" height="46">
+  <span class="brand-word">
+    <span class="brand-line1">Synthesis <small>srl</small></span>
+    <span class="brand-cap">Formazione e Consulenza</span>
+  </span>
+</a>
+      <ul class="nav">
+<li><button class="nav-link" type="button" aria-haspopup="true">Synthesis <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button><ul class="drop">
+<li><a href="synthesis.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Chi siamo — Synthesis</span></a></li>
+<li><a href="corsi-completati.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Corsi completati</span></a></li>
+<li><a href="certificazioni.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Certificazioni</span></a></li>
+</ul></li>
+<li><button class="nav-link" type="button" aria-haspopup="true">Disoccupati <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button><ul class="drop">
+<li><a href="disoccupati/formazione-finanziata.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Formazione finanziata per disoccupati</span></a></li>
+<li><a href="disoccupati/formazione-a-pagamento.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Formazione a pagamento per disoccupati</span></a></li>
+<li><a href="disoccupati/assegno-per-il-lavoro.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Assegno per il lavoro (AxL)</span></a></li>
+<li><a href="disoccupati/programma-gol.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Programma GOL</span></a></li>
+<li><a href="disoccupati/progetti-europei.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Progetti Europei</span></a></li>
+</ul></li>
+<li><button class="nav-link" type="button" aria-haspopup="true">Occupati <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button><ul class="drop">
+<li class="drop-group"><a href="occupati/formazione-finanziata.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Formazione finanziata per occupati</span></a><ul class="drop drop-sub">
+<li><a href="occupati/fse-fsc.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>FSE e FSC</span></a></li>
+<li><a href="occupati/fonter.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>FonTer</span></a></li>
+<li><a href="occupati/fondartigianato.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>Fondartigianato</span></a></li>
+<li><a href="occupati/for-te.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>For.Te.</span></a></li>
+<li><a href="occupati/fondoprofessioni.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>Fondoprofessioni</span></a></li>
+<li><a href="occupati/fondimpresa.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>Fondimpresa</span></a></li>
+</ul></li>
+<li><a href="occupati/formazione-a-pagamento.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Formazione a pagamento per occupati</span></a></li>
+<li><a href="occupati/formazione-sanita.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Formazione finanziata sanità</span></a></li>
+<li><a href="occupati/progetti-europei.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Progetti Europei</span></a></li>
+</ul></li>
+<li><button class="nav-link" type="button" aria-haspopup="true">Servizi di integrazione <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button><ul class="drop">
+<li class="drop-group"><a href="servizi-di-integrazione/italiano-per-stranieri.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Italiano per stranieri</span></a><ul class="drop drop-sub">
+<li><a href="servizi-di-integrazione/corsi-plida.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>Corsi di preparazione per l’esame PLIDA</span></a></li>
+<li><a href="servizi-di-integrazione/certificazione-plida.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg><span>Certificazione lingua italiana</span></a></li>
+</ul></li>
+<li><a href="servizi-di-integrazione/cittadini-extra-ue.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Servizi integrazione cittadini extra UE</span></a></li>
+<li><a href="servizi-di-integrazione/inclusione-sociale.html"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m10 3-8.5 4.2L10 11.3l8.5-4.1L10 3Z"/><path d="M5 9.5v4.2c0 1.2 2.2 2.5 5 2.5s5-1.3 5-2.5V9.5M18.5 7.2v4.6"/></svg><span>Servizi inclusione sociale cittadini italiani</span></a></li>
+</ul></li>
+</ul>
+      <a class="btn btn-primary btn-sm head-cta" href="contatti.html">Contattaci</a>
+      <button class="burger" aria-label="Apri il menu" aria-expanded="false"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="drawer-veil"></div>
+<aside class="drawer" aria-label="Menu di navigazione">
+  <div class="drawer-head">
+    <a class="brand" href="index.html" aria-label="Synthesis srl — Formazione e Consulenza">
+  <img src="assets/img/pantera.png" alt="Pantera Synthesis" width="40" height="46">
+  <span class="brand-word">
+    <span class="brand-line1">Synthesis <small>srl</small></span>
+    <span class="brand-cap">Formazione e Consulenza</span>
+  </span>
+</a>
+    <button class="drawer-close" aria-label="Chiudi il menu"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m4.5 4.5 11 11m0-11-11 11"/></svg></button>
+  </div>
+  <nav class="drawer-nav" aria-label="Menu principale"><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="synthesis.html">Synthesis</a></li>
+<li><button class="acc-btn" aria-expanded="false" aria-controls="acc-1">Disoccupati <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
+<div class="acc-panel" id="acc-1"><div><ul>
+<li><a href="disoccupati/formazione-finanziata.html">Formazione finanziata per disoccupati</a></li>
+<li><a href="disoccupati/formazione-a-pagamento.html">Formazione a pagamento per disoccupati</a></li>
+<li><a href="disoccupati/assegno-per-il-lavoro.html">Assegno per il lavoro (AxL)</a></li>
+<li><a href="disoccupati/programma-gol.html">Programma GOL</a></li>
+<li><a href="disoccupati/progetti-europei.html">Progetti Europei</a></li>
+</ul></div></div></li>
+<li><button class="acc-btn" aria-expanded="false" aria-controls="acc-2">Occupati <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
+<div class="acc-panel" id="acc-2"><div><ul>
+<li><a href="occupati/formazione-finanziata.html">Formazione finanziata per occupati</a>
+<button class="acc-btn" aria-expanded="false" aria-controls="acc-3" style="padding-top:.2rem">Vedi i fondi <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
+<div class="acc-panel" id="acc-3"><div><ul>
+<li><a href="occupati/fse-fsc.html">FSE e FSC</a></li>
+<li><a href="occupati/fonter.html">FonTer</a></li>
+<li><a href="occupati/fondartigianato.html">Fondartigianato</a></li>
+<li><a href="occupati/for-te.html">For.Te.</a></li>
+<li><a href="occupati/fondoprofessioni.html">Fondoprofessioni</a></li>
+<li><a href="occupati/fondimpresa.html">Fondimpresa</a></li>
+</ul></div></div></li>
+<li><a href="occupati/formazione-a-pagamento.html">Formazione a pagamento per occupati</a></li>
+<li><a href="occupati/formazione-sanita.html">Formazione finanziata sanità</a></li>
+<li><a href="occupati/progetti-europei.html">Progetti Europei</a></li>
+</ul></div></div></li>
+<li><button class="acc-btn" aria-expanded="false" aria-controls="acc-4">Servizi di integrazione <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
+<div class="acc-panel" id="acc-4"><div><ul>
+<li><a href="servizi-di-integrazione/italiano-per-stranieri.html">Italiano per stranieri</a>
+<button class="acc-btn" aria-expanded="false" aria-controls="acc-5" style="padding-top:.2rem">Vedi i fondi <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"/></svg></button>
+<div class="acc-panel" id="acc-5"><div><ul>
+<li><a href="servizi-di-integrazione/corsi-plida.html">Corsi di preparazione per l’esame PLIDA</a></li>
+<li><a href="servizi-di-integrazione/certificazione-plida.html">Certificazione lingua italiana</a></li>
+</ul></div></div></li>
+<li><a href="servizi-di-integrazione/cittadini-extra-ue.html">Servizi integrazione cittadini extra UE</a></li>
+<li><a href="servizi-di-integrazione/inclusione-sociale.html">Servizi inclusione sociale cittadini italiani</a></li>
+</ul></div></div></li>
+<li><a href="corsi-completati.html">Corsi completati</a></li>
+<li><a href="certificazioni.html">Certificazioni</a></li>
+<li><a href="contatti.html">Contatti</a></li>
+</ul></nav>
+  <div class="drawer-foot">
+    <a class="btn btn-primary" href="contatti.html">Contattaci</a>
+    <a class="btn btn-ghost" href="tel:+390498078751"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 14.2v2a1.7 1.7 0 0 1-1.9 1.7A16.4 16.4 0 0 1 2.1 4.4 1.7 1.7 0 0 1 3.8 2.5h2a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-.9.8a13.6 13.6 0 0 0 5.1 5.1l.9-.8a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg> 049 80 78 751</a>
+    <div class="drawer-seal">
+      <img src="assets/img/u2104-regione.png" alt="">
+      <span>Organismo di Formazione accreditato dalla Regione del Veneto</span>
+    </div>
+  </div>
+</aside>
+<main id="main">
+<section class="page-hero">
+  <img class="pantera-mark" src="assets/img/pantera-white.png" alt="" aria-hidden="true">
+  <div class="container">
+    <nav aria-label="Percorso"><ol class="crumbs"><li><a href="index.html">Home</a></li><li aria-current="page">Corsi completati</li></ol></nav>
+    <h1 class="rv">Scopri tutti i nostri corsi di formazione <em style="font-style:normal;color:var(--blue-300)">completati in questi anni</em></h1>
+    <p class="lead rv rv-d1">Scopri tutti i corsi di formazione completati in questi anni: la storia concreta del lavoro di Synthesis.</p>
+    
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="head-row rv"><div class="section-head mb-0"><h2>I corsi disponibili</h2><p>12 corsi pubblicati in questa sezione.</p></div></div>
+    <div class="cards-grid"><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2402-pexels-kampus-production-8204396-scaled.jpg" alt="Segretario di studio medico" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/segretario-di-studio-medico-4.html">Segretario di studio medico</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Synthesis srl (soggetto attuatore) in collaborazione con Adecco Italia Spa (soggetto promotore – ApL), promuove un corso gratuito finanziato dal Fondo Forma.Temp (ente finanziatore) per disoccupati e inoccupati Il percorso formativo è finalizzato ad adeguare le competenze professionali dei destinatari alla domanda di lavoro rilevata in fase di analisi dei fabbisogni. Il profilo professionale in […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2209-pexels-mikhail-nilov-8296970-scaled.jpg" alt="TECNICO DI AMMINISTRAZIONE E CONTABILITA’" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/tecnico-di-amministrazione-e-contabilita.html">TECNICO DI AMMINISTRAZIONE E CONTABILITA’</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">TECNICO DI AMMINISTRAZIONE E CONTABILITA’ Il corso di propone di formare un Tecnico di amministrazione e contabilità, il quale si occupa del trattamento contabile delle transazioni economiche patrimoniali e finanziarie in base alla normativa vigente. Esegue elaborazioni volte alla stesura del bilancio di esercizio e segue, dal punto di vista documentale, la registrazione di ogni […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2209-pexels-karolina-grabowska-7195310-scaled.jpg" alt="SEGRETARIO DI STUDIO MEDICO" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/1072.html">SEGRETARIO DI STUDIO MEDICO</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">SEGRETARIO DI STUDIO MEDICO Il percorso formativo è finalizzato ad adeguare le competenze professionali dei destinatari alla domanda di lavoro rilevata in fase di analisi dei fabbisogni. Il profilo professionale in questione gestisce le attività di segreteria e possiede cono-scenze in materia sanitaria, normativa, operativa e di comunicazione, fondamenta-le per il lavoro di back e […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2209-pexels-lisa-fotios-1092644.jpg" alt="SOCIAL MEDIA MARKETING: COME PROMUOVERE E VENDERE SUL WEB" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/social-media-marketing-come-promuovere-e-vendere-sul-web-2.html">SOCIAL MEDIA MARKETING: COME PROMUOVERE E VENDERE SUL WEB</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">SOCIAL MEDIA MARKETING: COME PROMUOVERE E VENDERE SUL WEB Il corso si propone di formare una figura professionale in grado di creare siti internet con l’implementazione di campagne pubblicitarie legate al posizionamento del sito nella rete ed all’uso dei Social Network quali nuovi strumenti per la ricerca e la fidelizzazione della nuova clientela. Si propone […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2206-pexels-gustavo-fring-4173249-1.jpg" alt="SEGRETARIO DI STUDIO MEDICO" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/segretario-di-studio-medico-3.html">SEGRETARIO DI STUDIO MEDICO</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Synthesis srl in collaborazione con Adecco promuove un percorso formativo per il profilo di “Segretario di studio medico” finanziato dal fondo Forma.Temp. Le Politiche Attive del lavoro finanziate da Forma.Temp prevedono il finanziamento della formazione per l’acquisizione di nuove competenze, l’aggiornamento, la qualificazione e la riqualificazione. Tutti i corsi di formazione finanziati da Forma.Temp sono a titolo […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2206-pexels-karolina-grabowska-7195314-scaled.jpg" alt="SEGRETARIO DI STUDIO MEDICO" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/segretario-di-studio-medico-2.html">SEGRETARIO DI STUDIO MEDICO</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Synthesis srl in collaborazione con Adecco promuove un percorso formativo per il profilo di “Segretario di studio medico” finanziato dal fondo Forma.Temp. Le Politiche Attive del lavoro finanziate da Forma.Temp prevedono il finanziamento della formazione per l’acquisizione di nuove competenze, l’aggiornamento, la qualificazione e la riqualificazione. Tutti i corsi di formazione finanziati da Forma.Temp sono a […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati, Corsi per disoccupati, Formazione finanziata per disoccupati</span>
+    <img src="assets/img/u2201-Immagine.jpg" alt="SEGRETARIO DI STUDIO MEDICO" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/segretario-di-studio-medico.html">SEGRETARIO DI STUDIO MEDICO</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Il percorso formativo è finalizzato ad adeguare le competenze professionali dei destinatari alla domanda di lavoro rilevata in fase di analisi dei fabbisogni. Il profilo professionale in questione gestisce le attività di segreteria e possiede conoscenze in materia sanitaria, normativa, operativa e di comunicazione, fondamentale per il lavoro di back e front office nel contesto […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2109-9.png" alt="WE Professione – Operatore della logistica e del magazzino" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/we-professione-operatore-della-logistica-e-del-magazzino.html">WE Professione – Operatore della logistica e del magazzino</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Il percorso si prefigge di sviluppare tutte le competenze, conoscenze e abilità della figura repertoriata dell’Operatore della logistica e del magazzino che si occupa di stoccare e movimentare, anche con l’utilizzo di muletto, le merci in magazzino secondo il flusso previsto ed effettivo di ordini, spedizioni e consegne, oltre che di registrare i relativi dati […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2105-we-corso-segreteria-gratuito-disoccupati.jpg" alt="WE PROFESSIONE— Addetto alla segreteria commerciale specializzato nel mercato italiano" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/we-professione-addetto-alla-segreteria-commerciale-specializzato-nel-mercato-italiano-2.html">WE PROFESSIONE— Addetto alla segreteria commerciale specializzato nel mercato italiano</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">L’obiettivo formativo specifico di tale progetto è quello di far acquisire ai partecipanti competenze tecniche legate alla figura professionale dell’ “Addetto alla segreteria commerciale specializzato nel mercato italiano”. Questo obiettivo è strettamente legato all’analisi dei bisogni delle aziende partner di progetto. Il percorso sviluppa tutte le competenze, conoscenze e abilità della figura repertoriata del segretario […]</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2105-ok.jpg" alt="WE professione – Tecnico specializzato della qualità delle produzioni alimentari e settore food" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/we-professione-tecnico-specializzato-della-qualita-delle-produzioni-alimentari-e-settore-food.html">WE professione – Tecnico specializzato della qualità delle produzioni alimentari e settore food</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">Il progetto forma un profilo di Tecnico addetto al controllo qualità delle produzioni alimentari junior che si inserisce nelle imprese partner con un ruolo esecutivo.</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2104-corso-2.jpg" alt="Specialista di applicazioni web e multimediali" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/lavoro-il-mio-lavoro-ibrido-imprese-che-si-trasformano-e-nuove-competenze-trasversali-richieste-over-54.html">Specialista di applicazioni web e multimediali</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">RIAPERTURA SELEZIONI – Il progetto ha l’obiettivo di formare al ruolo di “Specialista di applicazioni web e multimediali”capace di identificare le esigenze di immagine e comunicazione di una organizzazione.</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article><article class="corso-card rv">
+  <div class="corso-media">
+    <span class="corso-badge">Corsi completati</span>
+    <img src="assets/img/u2104-corso-1.jpg" alt="Tecnico specializzato in logistica, spedizioni e trasporti" loading="lazy">
+  </div>
+  <div class="corso-body">
+    <h3 class="corso-title"><a href="corsi/corso-per-personale-addetto-ai-servizi-di-controllo-delle-attivita-di-intrattenimento-e-di-spettacolo-in-luoghi-aperti-al-pubblico-o-in-pubblici-esercizi-bodyguard.html">Tecnico specializzato in logistica, spedizioni e trasporti</a></h3>
+    <ul class="corso-meta"></ul>
+    <p class="corso-x">RIAPERTURA SELEZIONI – Il progetto ha l’obiettivo di formare il profilo del “Tecnico specializzato in logistica, spedizioni e trasporti” che si occupa della programmazione, implementazione e monitoraggio dell’immagazzinamento.</p>
+    <span class="corso-go">Scopri il corso <svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></span>
+  </div>
+</article></div>
+  </div>
+</section><section class="section-tight section-cloud">
+  <div class="container">
+    <div class="head-row rv">
+      <div class="section-head"><h2>I nostri partner</h2>
+      <p>Le realtà che collaborano con Synthesis sul territorio e nei progetti.</p></div>
+    </div>
+  </div>
+  <div class="marquee rv" aria-label="Loghi dei partner">
+    <div class="marquee-track"><img src="assets/img/u2104-radio-pocket_fondo-pieno.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo-masterclass_blu.jpeg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-psychometrics.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logosoloscritta2.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo-montecchia11.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo-cadellanave1-1.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo200.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo_studiassociati-d968ea8d-331w.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-LOGO-PICCOLA-comunita.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-logo-INIAPA.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-adecco-logo-2.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-regione.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-way-150x150-1.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-LOGO-STEREO.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-radiosportiva01.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-LOGO-RADIO-CAFE-orrizzontale_vettoriale.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-orange-300x225-e1557064028272.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-7-150x150-1.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-2-e1557063450748-1.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-v-pocket-logo.png" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-5-e1557063581467.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-4-768x576-1.jpg" alt="Logo partner" loading="lazy"><img src="assets/img/u2104-cropped-3-e1557063311379.jpg" alt="Logo partner" loading="lazy"></div>
+  </div>
+</section><section class="section section-form" id="contatti-form">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-side rv">
+        <h2>Compila il form per richiedere informazioni</h2>
+        <p>Lasciaci un messaggio, verrai contattato al più presto dai nostri responsabili.</p>
+        <ul class="contact-methods">
+          <li><a href="tel:+390498078751"><span class="path-ic"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 14.2v2a1.7 1.7 0 0 1-1.9 1.7A16.4 16.4 0 0 1 2.1 4.4 1.7 1.7 0 0 1 3.8 2.5h2a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-.9.8a13.6 13.6 0 0 0 5.1 5.1l.9-.8a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg></span><span><b>049 80 78 751</b><span>dal lunedì al venerdì</span></span></a></li>
+          <li><a href="mailto:formazione@synthesis-srl.com"><span class="path-ic"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12.5" rx="2.2"/><path d="m2.8 5.6 7.2 6 7.2-6"/></svg></span><span><b>formazione@synthesis-srl.com</b><span>rispondiamo al più presto</span></span></a></li>
+          <li><a href="https://maps.google.com/?q=Via+Pan%C3%A0+56%2FA+Noventa+Padovana" target="_blank" rel="noopener"><span class="path-ic"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.1 6-9.6A6 6 0 0 0 4 8.4C4 12.9 10 18 10 18Z"/><circle cx="10" cy="8.4" r="2.2"/></svg></span><span><b>Via Panà 56/A — Noventa Padovana (PD)</b><span>vieni a trovarci in sede</span></span></a></li>
+        </ul>
+      </div>
+      <form class="form-card rv rv-d1" data-mailform novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="f-nome">Nome *</label><input id="f-nome" name="nome" required autocomplete="given-name" placeholder="Il tuo nome"></div>
+          <div class="field"><label for="f-cognome">Cognome *</label><input id="f-cognome" name="cognome" required autocomplete="family-name" placeholder="Il tuo cognome"></div>
+          <div class="field"><label for="f-email">Email *</label><input id="f-email" type="email" name="email" required autocomplete="email" placeholder="nome@esempio.it"></div>
+          <div class="field"><label for="f-tel">Telefono</label><input id="f-tel" type="tel" name="telefono" autocomplete="tel" placeholder="Il tuo numero"></div>
+          <div class="field full"><label for="f-tipo">Sei un privato o un&rsquo;azienda? *</label>
+            <select id="f-tipo" name="tipo" required>
+              <option value="" selected disabled>— Seleziona un'opzione —</option>
+              <option>Privato</option>
+              <option>Azienda</option>
+            </select>
+          </div>
+          <div class="field full"><label for="f-msg">Messaggio *</label><textarea id="f-msg" name="messaggio" required placeholder="Scrivici qui la tua richiesta…"></textarea></div>
+          <div class="full check-row">
+            <input type="checkbox" id="f-priv" required>
+            <label for="f-priv">Accetto l&rsquo;<a href="privacy-policy.html">informativa sulla privacy</a> *</label>
+          </div>
+          <div class="full"><button class="btn btn-primary" type="submit">Invia la richiesta <svg class="ic ic-arr" viewBox="0 0 20 20" aria-hidden="true"><path d="M3.5 10h13m0 0-5-5m5 5-5 5"/></svg></button></div>
+        </div>
+        <p class="form-ok">Grazie! Si aprirà il tuo client di posta con il messaggio pronto da inviare.</p>
+        <p class="form-note">I campi contrassegnati con * sono obbligatori.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <img class="pantera-mark" src="assets/img/pantera-white.png" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="foot-top"><div class="foot-col foot-brand">
+  <a class="brand brand-inv" href="index.html" aria-label="Synthesis srl — Formazione e Consulenza">
+  <img src="assets/img/pantera-white.png" alt="Pantera Synthesis" width="40" height="46">
+  <span class="brand-word">
+    <span class="brand-line1">Synthesis <small>srl</small></span>
+    <span class="brand-cap">Formazione e Consulenza</span>
+  </span>
+</a>
+  <p>Dal 1996 progettiamo percorsi di formazione professionale e inserimento lavorativo in tutto il Veneto.</p>
+  <div class="foot-seal">
+    <img src="assets/img/u2104-regione.png" alt="Regione del Veneto">
+    <span>Organismo di Formazione accreditato dalla Regione del Veneto</span>
+  </div>
+  <div class="foot-social">
+    <a href="https://www.facebook.com/synthesisformazione" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 3.5h-2A3 3 0 0 0 7.5 6.5V9h-2v3h2v5.5h3V12h2.3l.7-3h-3V6.7a.7.7 0 0 1 .7-.7h2.3Z"/></svg></a>
+    <a href="https://www.instagram.com/synthesisformazione/?hl=it" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.8" y="2.8" width="14.4" height="14.4" rx="4"/><circle cx="10" cy="10" r="3.4"/><circle cx="14.4" cy="5.7" r=".9" fill="currentColor" stroke="none"/></svg></a>
+    <a href="https://it.linkedin.com/company/synthesis-srl" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2.8" y="2.8" width="14.4" height="14.4" rx="2.5"/><path d="M6.4 8.4v5.4M6.4 6v.1M9.5 13.8V8.4m0 2a2.4 2.4 0 0 1 4.8 0v3.4"/></svg></a>
+  </div>
+</div><div class="foot-col">
+  <h4>Per i disoccupati</h4>
+  <ul>
+    <li><a href="disoccupati/formazione-finanziata.html">Formazione finanziata</a></li>
+    <li><a href="disoccupati/formazione-a-pagamento.html">Formazione a pagamento</a></li>
+    <li><a href="disoccupati/assegno-per-il-lavoro.html">Assegno per il lavoro (AxL)</a></li>
+    <li><a href="disoccupati/programma-gol.html">Programma GOL</a></li>
+    <li><a href="disoccupati/progetti-europei.html">Progetti Europei</a></li>
+  </ul>
+</div><div class="foot-col">
+  <h4>Per gli occupati</h4>
+  <ul>
+    <li><a href="occupati/formazione-finanziata.html">Formazione finanziata</a></li>
+    <li><a href="occupati/formazione-a-pagamento.html">Formazione a pagamento</a></li>
+    <li><a href="occupati/formazione-sanita.html">Formazione finanziata sanità</a></li>
+    <li><a href="occupati/fse-fsc.html">FSE e FSC</a></li>
+    <li><a href="occupati/progetti-europei.html">Progetti Europei</a></li>
+  </ul>
+</div><div class="foot-col">
+  <h4>Synthesis</h4>
+  <ul>
+    <li><a href="synthesis.html">Chi siamo</a></li>
+    <li><a href="servizi-di-integrazione/italiano-per-stranieri.html">Italiano per stranieri</a></li>
+    <li><a href="corsi-completati.html">Corsi completati</a></li>
+    <li><a href="certificazioni.html">Certificazioni</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+  <h4 style="margin-top:1.4rem">Contatti</h4>
+  <ul class="foot-contact">
+    <li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.1 6-9.6A6 6 0 0 0 4 8.4C4 12.9 10 18 10 18Z"/><circle cx="10" cy="8.4" r="2.2"/></svg><span>Via Panà 56/A — Noventa Padovana (PD)</span></li>
+    <li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 14.2v2a1.7 1.7 0 0 1-1.9 1.7A16.4 16.4 0 0 1 2.1 4.4 1.7 1.7 0 0 1 3.8 2.5h2a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-.9.8a13.6 13.6 0 0 0 5.1 5.1l.9-.8a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg><a href="tel:+390498078751">049 80 78 751</a></li>
+    <li><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><rect x="2" y="4" width="16" height="12.5" rx="2.2"/><path d="m2.8 5.6 7.2 6 7.2-6"/></svg><a href="mailto:formazione@synthesis-srl.com">formazione@synthesis-srl.com</a></li>
+  </ul>
+</div></div>
+    <div class="foot-legal">
+      <span>© Synthesis srl — P.IVA 03463230288 · C.F. 02708770231</span>
+      <span class="grow"></span>
+      <a href="https://www.iubenda.com/privacy-policy/14943686/cookie-policy" target="_blank" rel="noopener">Cookies Policy</a>
+      <span class="sep">·</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+<a class="float-call" href="tel:+390498078751" aria-label="Chiamaci: 049 80 78 751"><svg class="ic" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.5 14.2v2a1.7 1.7 0 0 1-1.9 1.7A16.4 16.4 0 0 1 2.1 4.4 1.7 1.7 0 0 1 3.8 2.5h2a1.7 1.7 0 0 1 1.7 1.5c.1.8.3 1.7.6 2.5a1.7 1.7 0 0 1-.4 1.8l-.9.8a13.6 13.6 0 0 0 5.1 5.1l.9-.8a1.7 1.7 0 0 1 1.8-.4c.8.3 1.6.5 2.5.6a1.7 1.7 0 0 1 1.4 1.6Z"/></svg><span>Chiamaci</span></a>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
